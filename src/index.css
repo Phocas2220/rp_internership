@@ -1,0 +1,13 @@
+body {
+  font-family: century gothic;
+  display: flex;
+  background: url('./components/assets/elearn.jpg') no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(30px);
+}
+*
+{
+  margin: 2;
+  padding: 0;
+  box-sizing: border-box;
+}

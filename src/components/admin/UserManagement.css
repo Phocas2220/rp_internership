@@ -1,0 +1,28 @@
+/* src/components/admin/UserManagement.css */
+
+.user-management-table th,
+.user-management-table td {
+  padding-left: 1.5rem; /* Equivalent to Tailwind's px-6 */
+  padding-right: 1.5rem; /* Equivalent to Tailwind's px-6 */
+  padding-top: 0.5rem;   /* Equivalent to Tailwind's py-2 */
+  padding-bottom: 0.5rem; /* Equivalent to Tailwind's py-2 */
+  border: 1px solid #d1d5db; /* Equivalent to Tailwind's border border-gray-300 */
+}
+
+/* Optional: To make the table border collapse nicely */
+.user-management-table {
+  border-collapse: collapse;
+}
+.user-management-table button:nth-child(2) {
+  color: #1d7036;
+}
+.user-management-table button:nth-child(2):hover {
+  color: red;
+  background: none;
+  box-shadow: 0 0 5px red,0 0 5px red,0 0 5px red,0 0 5px red;
+}
+/* Optional: Styling for active/inactive rows if needed in CSS */
+.user-management-table tbody tr.inactive-user {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  color: #6b7280; /* text-gray-500 */
+}

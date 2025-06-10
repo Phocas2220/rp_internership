@@ -1,0 +1,892 @@
+/* General Body and Dashboard Container */
+body {
+    background-color: #f0f2f5; /* Light grey background for the entire page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.learner-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distributes items to ends */
+    align-items: center; /* Vertically centers items */
+    border-radius: 10px;
+    background-color: #2c3e50; /* Dark blue/grey */
+    color: white;
+    padding: 12px 25px; /* Adjusted padding */
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
+}
+
+.navbar .title {
+    margin: 0;
+    font-size: 1.8em; /* Adjusted font size */
+    font-weight: 600;
+    color: #fff;
+    flex-shrink: 0; /* Prevents title from shrinking */
+}
+
+/* Navbar Navigation Links (My Modules, Browse, Profile) */
+.navbar .nav-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+    flex-grow: 1; /* Allows nav links to take available space */
+    justify-content: center; /* Center the links */
+    margin: 0 20px; /* Horizontal margin */
+    flex-wrap: wrap; /* Allow nav links to wrap */
+}
+
+.navbar .nav-links button {
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0; /* Lighter white */
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Faster transition */
+}
+
+.navbar .nav-links button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay on hover */
+    color: #fff;
+}
+
+.navbar .nav-links button.active-tab {
+    background-color: #38a3bd; /* Active tab color */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-links button.active-tab:hover {
+    background-color: #2e8da3; /* Darker active color on hover */
+}
+
+.navbar .nav-links .nav-icon {
+    margin-right: 3px;
+    font-size: 1.1em;
+}
+
+/* Logout Button Styling */
+.logout-button {
+    background-color: #38a3bd;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 1em; /* Consistent font size */
+    display: flex;
+  
+    transition: background-color 0.3s ease; /* Faster transition */
+    flex-shrink: 0; /* Prevents button from shrinking */
+    /* REMOVED: margin-left: 1080px; - flexbox handles positioning now */
+}
+
+.logout-button:hover {
+    background-color: #f61c04;
+}
+
+.logout-button .power-icon {
+    margin-right: 1px; /* Icon to the left of "Logout" text */
+    margin-left: 0; /* Remove previous margin-left */
+    font-size: 1.1em;
+}
+
+
+/* Main Dashboard Content Area */
+.dashboard-content {
+    flex-grow: 1; /* Allows content area to fill vertical space */
+    max-width: 1000px;
+    margin: 20px auto; /* Centered with vertical margin */
+    padding: 0 15px; /* Reduced horizontal padding */
+    box-sizing: border-box;
+}
+
+/* Common Section Styling (My Modules, Browse, Profile) */
+.dashboard-section {
+    background-color: #ffffff;
+    padding: 25px; /* Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+.dashboard-section h2 {
+    color: #2c3e50;
+    font-size: 1.7em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.dashboard-section .info-message {
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px dashed #e0e0e0;
+    margin-top: 20px;
+}
+
+/* Module Cards Grid */
+.module-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 10px 0;
+}
+
+/* Individual Module Card Styling */
+.module-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.module-card h3 {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: none; /* Remove underline from card titles */
+    padding-bottom: 0;
+}
+
+.module-card .module-description {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to take available height */
+}
+
+.module-card .module-meta {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.module-card .module-meta span:not(:last-child)::after {
+    content: " | ";
+    margin: 0 5px;
+}
+
+.module-card .module-price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    height: 18px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #28a745; /* Green */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+    line-height: 18px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-bar-container .progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #333; /* Darker text for visibility over light background */
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 18px;
+}
+
+.module-status {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.module-status .status-in-progress { color: #007bff; font-weight: 600; }
+.module-status .status-completed { color: #28a745; font-weight: 600; }
+.module-status .status-enrolled { color: #ffc107; font-weight: 600; }
+
+
+/* Action Buttons (General) */
+.module-actions {
+    margin-top: auto; /* Pushes buttons to the bottom of the card */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 10px 18px;
+    border-radius: 25px; /* Pill-shaped buttons */
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* For link buttons */
+    color: white; /* Default text color */
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button .button-icon {
+    margin-right: 8px;
+}
+
+.primary-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+.primary-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.secondary-button {
+    background-color: #6c757d; /* Grey */
+    color: white;
+}
+.secondary-button:hover {
+    background-color: #5a6268; /* Darker grey */
+}
+
+/* Specific buttons */
+.large-button {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border-radius: 8px; /* Less rounded for larger buttons */
+}
+.submit-quiz-button {
+    background-color: #28a745; /* Green */
+}
+.submit-quiz-button:hover {
+    background-color: #218838;
+}
+.mark-completed-button.completed {
+    background-color: #d4edda; /* Light green for completed */
+    color: #155724; /* Dark green text */
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+.mark-completed-button.completed:hover {
+    transform: none;
+    box-shadow: none;
+}
+.back-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+.back-button:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-1px);
+}
+.back-button .button-icon { /* Adjust icon for back button */
+    margin-right: 5px;
+}
+
+
+/* Filter Controls */
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    align-items: center;
+}
+
+.filter-controls .search-box {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows search input to expand */
+    min-width: 200px;
+    position: relative; /* For icon positioning */
+}
+
+.filter-controls .search-icon {
+    position: absolute;
+    left: 12px;
+    color: #888;
+    font-size: 1.1em;
+}
+
+.filter-controls input[type="text"] {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Left padding for icon */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #555;
+    box-sizing: border-box;
+}
+
+.filter-controls select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fff;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+/* Learning Experience Section */
+.learning-experience-section .content-list h3 {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.learning-experience-section .content-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.learning-experience-section .content-item {
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px;
+}
+
+.learning-experience-section .content-item span {
+    font-weight: 500;
+    color: #333;
+    flex-grow: 1; /* Allow content title to grow */
+    min-width: 150px; /* Ensure title doesn't become too small */
+}
+
+.learning-experience-section .content-item .content-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.content-link-button {
+    background-color: #6c757d; /* Default grey */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.content-link-button:hover {
+    background-color: #5a6268;
+}
+.content-link-button.video-link { background-color: #dc3545; } /* Red for video */
+.content-link-button.video-link:hover { background-color: #c82333; }
+.content-link-button.document-link { background-color: #17a2b8; } /* Info blue for document */
+.content-link-button.document-link:hover { background-color: #138496; }
+.content-link-button.external-link { background-color: #ffc107; } /* Yellow for link */
+.content-link-button.external-link:hover { background-color: #e0a800; }
+.content-link-button .button-icon {
+    margin-right: 5px;
+}
+
+.assessment-prompt {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+    border-radius: 10px;
+}
+
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px); /* Subtle blur for background */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh; /* Limit height for scrollable content */
+    overflow-y: auto; /* Enable scrolling for tall modals */
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+    color: #333;
+}
+
+.modal-content h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+.modal-content .modal-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+.modal-content .modal-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+.modal-content .modal-subtitle {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+.modal-content .modal-syllabus-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.modal-content .modal-syllabus-list li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 0.95em;
+}
+.modal-content .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.modal-content .modal-price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2em;
+}
+
+
+/* Assessment Modal Specifics */
+.assessment-modal-content h2 {
+    border-bottom: none; /* Remove bottom border for quiz title */
+}
+.quiz-questions {
+    margin-top: 20px;
+}
+.question-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.quiz-nav-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.quiz-nav-button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+.quiz-nav-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.quiz-question-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.quiz-question-card .question-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.quiz-option-label {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.quiz-option-label:hover {
+    background-color: #f0f8ff;
+    border-color: #a0c4ff;
+}
+.quiz-option-label input[type="radio"] {
+    margin-right: 12px;
+    transform: scale(1.2); /* Make radio buttons slightly larger */
+}
+.submit-quiz-button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.quiz-results {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0fdf0;
+    border: 1px solid #d4edda;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.quiz-results h3 {
+    font-size: 1.5em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+.quiz-results .result-score {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.quiz-results .result-score .passed { color: #28a745; }
+.quiz-results .result-score .failed { color: #dc3545; }
+.quiz-results .result-summary {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .navbar .title {
+        margin-bottom: 15px;
+        font-size: 1.6em;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0;
+        gap: 8px;
+    }
+    .navbar .nav-links button {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .logout-button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .dashboard-content {
+        padding: 0 10px;
+        margin: 15px auto;
+    }
+    .dashboard-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .dashboard-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .module-cards-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .filter-controls .search-box,
+    .filter-controls select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .module-card .module-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%;
+    }
+    .module-card .action-button {
+        width: 100%;
+    }
+
+    .learning-experience-section .content-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    .learning-experience-section .content-item span {
+        margin-bottom: 10px;
+    }
+    .learning-experience-section .content-item .content-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .content-link-button, .mark-completed-button {
+        width: auto; /* Adjust specific content buttons to not take full width unless needed */
+        flex-grow: 1;
+    }
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+    .modal-close-button {
+        font-size: 1.8em;
+        top: 10px;
+        right: 15px;
+    }
+    .modal-content h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .quiz-question-card {
+        padding: 15px;
+    }
+    .quiz-question-card .question-text {
+        font-size: 1em;
+    }
+    .quiz-option-label {
+        padding: 10px 12px;
+    }
+}
+/* LearnerDashboard.css additions for content viewer */
+
+.module-learning-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-viewer {
+    background-color: var(--card-bg-color); /* Assuming you have defined CSS variables */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--secondary-color-light); /* Assuming secondary color */
+}
+
+.viewer-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.close-viewer-btn {
+    background: none;
+    border: none;
+    color: var(--text-color-light); /* Or a close button specific color */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.close-viewer-btn:hover {
+    color: var(--danger-color); /* Or a strong red for close */
+}
+
+.viewer-body {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (for video/iframe, height is 0 based on width) */
+    height: 0; /* Important for padding-top to work for aspect ratio */
+    overflow: hidden; /* Hide overflow if content extends beyond */
+}
+
+.content-video,
+.content-iframe,
+.content-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures content scales within bounds without cropping */
+    border: none; /* Remove iframe border */
+}
+
+.external-link-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.external-resource-btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.external-resource-btn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+/* Adjust content-item and content-actions styles if needed */
+.content-item .content-link {
+    /* Style the new buttons */
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.content-item .content-link:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.content-item .content-actions {
+    display: flex; /* Or grid for more complex layouts */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

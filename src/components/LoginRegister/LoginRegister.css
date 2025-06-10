@@ -1,0 +1,299 @@
+*
+{
+    font-family: century gothic;
+}
+.wrapper
+{
+    position: relative;
+    width: 420px;
+    height: 450px;
+    margin-left: 95%;
+    margin-top: 14%;
+    display: flex;
+    align-items: center;
+    transition:2s ease;
+}
+.form-box.login
+{
+    border-style: hidden;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    transition:2s ease;
+    backdrop-filter: blur(20px);
+    box-shadow:0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75),0 0 0 1px rgb(52, 105, 75);
+}
+.form-box.register
+{
+   background-color: transparent;
+   padding-top: 2px;
+   border-radius: 20px;
+   height: 120%;
+   overflow:auto;
+   transition:2s ease;
+   backdrop-filter: blur(20px);
+   box-shadow:0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75),0 0 0 1px rgb(52, 105, 75);
+}
+.form-box.register::-webkit-scrollbar
+{
+  width: 8px;
+  background: transparent;
+  max-height: 10px; /* Make this value smaller to make the thumb shorter */
+  overflow-y: auto;
+  /* ... rest of your scrollbar styling */
+}
+
+.form-box.register::-webkit-scrollbar:hover
+{
+  background: transparent;
+  border-radius: 50px;
+  min-height: 5px;
+  max-height: 5px;
+  padding-top: 20%;
+}
+.form-box.reset
+{
+    background-color: transparent;
+   border-radius: 20px;
+   overflow: hidden;
+   transition:2s ease;
+   backdrop-filter: blur(20px); 
+   box-shadow:0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75), 0 0 0 1px rgb(52, 105, 75),0 0 0 1px rgb(52, 105, 75);
+}
+.form-box:hover
+{
+box-shadow:0 0 0 3px rgb(52, 105, 75), 0 0 0 3px rgb(52, 105, 75), 0 0 0 2px rgb(52, 105, 75),0 0 0 3px rgb(52, 105, 75);
+}
+.wrapper .form-box
+{
+    width: 100%;
+    padding: 40px;
+    transition:2s ease;
+}
+.form-box.login
+{
+    border-radius: 20px;
+    border-style: line;
+    border-width: 2px;
+    transition:2s ease;
+}
+.wrapper.active .form-box.login
+{
+    transition: none;
+    translate: -400px;
+    transition:2s ease;
+}
+
+form h1
+{
+    font-size: 26px;
+    text-align: center;
+}
+form .input-box
+{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+}
+.input-box input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent; 
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.388);
+    border-radius: 30px; 
+    outline: none;  
+    color: #f1eaea;
+    font-size: 17px;
+    font-weight: 900;
+    padding: 20px 60px 20px 20px;
+} 
+.input-box input::placeholder
+{
+    color: #fff;
+}
+.input-box .icon
+{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -35%;
+    font-size: 30px;
+}
+.toggle-password-icon {
+  position: absolute;
+  right: 45px; /* Adjust this value to position it next to the lock icon */
+  top: 80%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above the input if necessary */
+}
+.toggle-password-icon:hover
+{
+  opacity: 1;
+  color: white;
+}
+form .remember-forgot
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top:15px;
+    padding: 20px;
+}
+.remember-forgot label input
+{
+    accent-color: white;
+    margin-right: 4px;
+}
+.remember-forgot a
+{
+    color: white;
+    text-decoration: none;
+}
+.remember-forgot a:hover
+{
+
+    transition: .4s ease-in;
+    font-size: 20px;
+    cursor: pointer;
+    color: #93d3e9;
+}
+form button
+{
+    width: 100%;
+    height: 45px;
+    background: rgb(243, 237, 237);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.388);
+    transition: .3s ease-in;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+form button:hover
+{
+    cursor: pointer;
+    transition: .5s ease-in;
+    background:  rgb(52, 105, 75);
+    color: white;
+    box-shadow: 0 0 10px white;
+}
+.contA
+{
+    width: 10%;
+    background: none;
+}
+.contB
+{
+    width: 10%;
+}
+.contC
+{
+    width: 10%;
+}
+
+form .link-button
+{
+font-size: 18px;
+text-align: center;
+}
+.link-button p a 
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+.link-button p a:hover
+{
+    cursor: pointer;
+    color: #93d3e9;
+    transition: .4s ease-in;
+}
+
+
+
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgb(16, 126, 55);
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+.link-button:hover {
+  background: none;
+  border: none;
+  padding: 0;
+  
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+/* LoginRegister.css */
+
+/* ... existing styles ... */
+
+.input-box.role-dropdown {
+  position: relative; /* Needed for positioning the icon */
+  width: 100%;
+  height: 50px; /* Adjust as needed */
+  margin: 15px 0;
+  border-bottom: 2px solid #162938; /* Matches other input boxes */
+}
+
+.input-box.role-dropdown select {
+  width: calc(100% - 30px); /* Adjust width to make space for the icon */
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  padding: 0 5px;
+  -webkit-appearance: none; /* Remove default dropdown arrow for custom styling */
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.input-box.role-dropdown select option {
+  background-color: #f0f0f0; /* Background for dropdown options */
+  color: #162938;
+}
+
+.input-box.role-dropdown .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #162938;
+  font-size: 1.2em;
+  pointer-events: none; /* Make the icon non-interactive so clicks go to the select */
+}
+
+/* Optional: Add a custom arrow if you removed the default */
+.input-box.role-dropdown::after {
+  content: '\25BC'; /* Unicode for a down arrow */
+  position: absolute;
+  right: 25px; /* Adjust position relative to the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #162938;
+  pointer-events: none;
+  font-size: 0.8em;
+}
+
+/* Styles for when the dropdown is focused (optional) */
+.input-box.role-dropdown select:focus {
+  border-color: #007bff; /* Example focus color */
+}

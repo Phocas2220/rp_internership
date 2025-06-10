@@ -1,0 +1,778 @@
+/* General Body and Container Styles */
+body {
+    margin-left: 25px;
+    font-family: Arial, sans-serif;
+    background-color: #0c52dd; /* Equivalent to bg-gray-100 */
+}
+
+.dashboard-content {
+   
+    max-width: 100%; /* Max width for content */
+    margin: 10px; /* Center the content */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+    background-color: #1a202c; /* Equivalent to bg-gray-900 */
+    padding: 1rem; /* Equivalent to p-4 */
+    color: white; /* Equivalent to text-white */
+}
+
+.navbar .title {
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: bold; /* Equivalent to font-bold */
+}
+
+.logout-button {
+    background-color: #ef4444; /* Equivalent to bg-red-600 */
+    color: white;
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    font-weight: 500; /* Equivalent to font-medium */
+    cursor: pointer;
+    margin-left: 1000px;
+    border: none;
+    transition: background-color 0.2s ease-in-out; /* Equivalent to hover:bg-red-700 */
+}
+
+.logout-button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}
+
+.logout-button .power-icon {
+    margin-right: 0.5rem; /* Equivalent to mr-2 */
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+    color: #333;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #596b6f;
+    margin-top: 2rem; /* Equivalent to mt-8 */
+}
+
+.module-preparation-section,
+.enrolled-learners-section {
+    margin-bottom: 2rem; /* Equivalent to mb-8 */
+}
+
+/* Module List and Content/Quiz Display */
+.module-list-container {
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    padding: 5%; /* Equivalent to p-4 */
+    border: 1px solid #fbfcfc; /* Equivalent to border */
+    border-radius: 20px; /* Equivalent to rounded-lg */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Equivalent to shadow-sm */
+    background: #d5d2d2; /* Equivalent to bg-white */
+}
+.this
+{
+    display: flex;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #059669;
+    border-radius: 20px;
+    margin: 3px;
+}
+.module-list-title {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    color: #2d3748; /* Equivalent to text-gray-800 */
+}
+
+.empty-message {
+    color: #4a5568; /* Equivalent to text-gray-600 */
+}
+
+.module-items-list {
+    list-style: disc; /* Equivalent to list-disc */
+    padding-left: 1rem; /* Equivalent to ml-4 */
+    color: #4a5568; /* Equivalent to text-gray-700 */
+}
+
+.module-item {
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.module-title {
+    font-weight: 500; /* Equivalent to font-medium */
+}
+
+.module-status-published {
+    margin-left: 0.5rem; /* Equivalent to ml-2 */
+    color: #0b0f0d; /* Equivalent to text-green-600 */
+}
+
+.module-status-draft {
+    margin-left: 0.5rem; /* Equivalent to ml-2 */
+    color: #f59e0b; /* Equivalent to text-yellow-600 */
+}
+
+.module-content-section,
+.module-quiz-section {
+    margin-top: 0.5rem; /* Equivalent to mt-2 or mt-4 */
+    padding-left: 1rem; /* Equivalent to pl-4 */
+    border-left: 2px solid #e2e8f0; /* Equivalent to border-l-2 border-gray-200 */
+}
+
+.content-section-title,
+.quiz-section-title {
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: #4a5568; /* Equivalent to text-gray-700 */
+}
+
+.content-items-list,
+.quiz-items-list {
+    list-style: disc;
+    padding-left: 1rem; /* Equivalent to ml-4 */
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.content-item,
+.quiz-item {
+    margin-bottom: 0.25rem; /* Equivalent to mb-1 */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: space-between; /* Equivalent to justify-between */
+}
+
+.content-item-details,
+.quiz-item-details {
+    flex: 1; /* Equivalent to flex-1 */
+    margin-right: 0.5rem; /* Equivalent to mr-2 */
+}
+
+.content-view-link {
+    color: #2563eb; /* Equivalent to text-blue-600 */
+    text-decoration: none; /* No default underline */
+    transition: text-decoration 0.2s ease-in-out;
+}
+
+.content-view-link:hover {
+    text-decoration: underline; /* Equivalent to hover:underline */
+}
+
+.content-item-actions,
+.quiz-item-actions {
+    display: flex; /* Equivalent to flex */
+    gap: 0.5rem; /* Equivalent to space-x-2 */
+}
+
+.content-move-button {
+    padding: 0.25rem 0.5rem; /* Equivalent to px-2 py-1 */
+    background-color: #e2e8f0; /* Equivalent to bg-gray-200 */
+    color: #2d3748; /* Equivalent to text-gray-800 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    font-size: 0.75rem; /* Equivalent to text-xs */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.content-move-button:hover {
+    background-color: #cbd5e0; /* Equivalent to hover:bg-gray-300 */
+}
+
+.content-move-button:disabled {
+    opacity: 0.5; /* Equivalent to disabled:opacity-50 */
+    cursor: not-allowed;
+}
+
+.save-order-container {
+    margin-top: 1rem; /* Equivalent to mt-4 */
+    display: flex; /* Equivalent to flex */
+    justify-content: flex-end; /* Equivalent to justify-end */
+}
+
+.save-order-button {
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    background-color: #2a8298; /* Equivalent to bg-green-600 */
+    color: white;
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    cursor: pointer;
+    border: none;
+    transition: background-color 1s ease-in-out;
+    margin-bottom: 6px;
+}
+
+.save-order-button:hover {
+    background-color: #059669; /* Equivalent to hover:bg-green-700 */
+}
+
+.save-order-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.reorder-status {
+    margin-top: 0.5rem; /* Equivalent to mt-2 */
+    text-align: right; /* Equivalent to text-right */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.reorder-status.success {
+    color: #10b981; /* Equivalent to text-green-600 */
+}
+
+.reorder-status.error {
+    color: #ef4444; /* Equivalent to text-red-600 */
+}
+
+.empty-content-message,
+.empty-quiz-message {
+    color: #6b7280; /* Equivalent to text-gray-500 */
+    font-style: italic; /* Equivalent to italic */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.quiz-action-button {
+    padding: 0.25rem 0.5rem; /* Equivalent to px-2 py-1 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    font-size: 0.75rem; /* Equivalent to text-xs */
+    color: white;
+    cursor: pointer;
+    border: none;
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.quiz-action-button.view {
+    background-color: #13a956; /* Equivalent to bg-blue-500 */
+}
+
+.quiz-action-button.view:hover {
+    background-color: #0ad25d; /* Equivalent to hover:bg-blue-600 */
+    transition: 1s ease-in;
+}
+
+.quiz-action-button.delete {
+    background-color: #ef4444; /* Equivalent to bg-red-500 */
+}
+
+.quiz-action-button.delete:hover {
+    background-color: #cc0404; /* Equivalent to hover:bg-red-600 */
+    transition: 1s ease-in;
+}
+
+.quiz-action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.delete-quiz-status {
+    margin-top: 0.5rem; /* Equivalent to mt-2 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.delete-quiz-status.success {
+    color: #10b981; /* Equivalent to text-green-600 */
+}
+
+.delete-quiz-status.error {
+    color: #ef4444; /* Equivalent to text-red-600 */
+}
+
+/* Forms */
+.form-container {
+    background-color: #b7d8cf;
+    padding: 1.5rem; /* Equivalent to p-6 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Equivalent to shadow-md */
+    margin-bottom: 2rem; /* Equivalent to mb-8 */
+    border-radius: 20px;
+}
+
+.form-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+    color: #333;
+}
+
+.content-upload-form,
+.quiz-creation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Equivalent to space-y-4 */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Added for consistency, could be combined with gap in flex parent */
+}
+
+.form-label {
+    display: block; /* Equivalent to block */
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #2d3748; /* Equivalent to text-gray-800 */
+    margin-bottom: 0.5rem; /* Equivalent to mb-1 */
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-input-short,
+.form-select-small {
+    display: block; /* Equivalent to block */
+    width: 100%; /* Equivalent to w-full */
+    padding: 0.75rem; /* Equivalent to p-3 */
+    border: 1px solid #b7d8cf; /* Equivalent to border border-gray-300 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Equivalent to shadow-sm */
+    font-size: 1rem; /* Equivalent to text-base */
+    color: #374151; /* Equivalent to text-gray-700 */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus,
+.form-input-short:focus,
+.form-select-small:focus {
+    outline: none;
+    border-color: #3b82f6; /* Equivalent to focus:ring-blue-500 focus:border-blue-500 */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Focus ring effect */
+}
+
+.form-textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-file-input {
+    display: block; /* Equivalent to block */
+    width: 100%; /* Equivalent to w-full */
+    padding: 0.5rem; /* Adjust padding for file input */
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem; /* Smaller text for file input */
+    color: #4a5568;
+    background-color: #b7d8cf; /* Light background for file input */
+}
+
+.submit-button {
+    background-color:#2d3748; /* Equivalent to bg-blue-600 */
+    color: white;
+    padding: 0.75rem 1.25rem; /* Equivalent to px-5 py-3 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    font-weight: 600; /* Equivalent to font-semibold */
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 0.5rem; /* Small margin-top */
+}
+
+.submit-button:hover {
+    border-radius: 30px 1px;
+   background: none;
+   color: black;
+    transition: 1s ease-in;
+    box-shadow: 0 0 2px #374151,0 0 12px #374151,0 0 22px #374151,0 0 32px #374151;
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status-message {
+    margin-top: 0.75rem; /* Equivalent to mt-3 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    text-align: center; /* Equivalent to text-center */
+}
+
+.status-message.success {
+    color: #059669; /* Equivalent to text-green-700 */
+}
+
+.status-message.error {
+    color: #dc2626; /* Equivalent to text-red-700 */
+}
+
+.icon-margin {
+    margin-right: 0.5rem; /* Equivalent to mr-2 */
+}
+
+.form-group-inline {
+    display: flex; /* Equivalent to flex */
+    gap: 1.5rem; /* Equivalent to gap-6 */
+    margin-bottom: 1rem;
+}
+
+.form-group-inline .form-group {
+    flex: 1; /* Equivalent to flex-1 */
+    margin-bottom: 0; /* Remove extra margin */
+}
+
+.form-input-short {
+    width: auto; /* Allow input to size naturally */
+    min-width: 100px; /* Ensure a minimum width */
+}
+
+.sub-section-title {
+    font-size: 1rem; /* Equivalent to text-base */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-top: 1.5rem; /* Equivalent to mt-6 */
+    margin-bottom: 0.75rem; /* Equivalent to mb-3 */
+    color: #333;
+}
+
+.question-block {
+    border: 1px solid #d1d5db; /* Equivalent to border border-gray-300 */
+    padding: 1rem; /* Equivalent to p-4 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+    background-color: #f9fafb; /* Equivalent to bg-gray-50 */
+}
+
+.question-header {
+    display: flex; /* Equivalent to flex */
+    justify-content: space-between; /* Equivalent to justify-between */
+    align-items: center; /* Equivalent to items-center */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+}
+
+.remove-button {
+    background-color: #ef4444; /* Equivalent to bg-red-500 */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Make it round */
+    width: 2rem; /* Fixed width */
+    height: 2rem; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.875rem; /* Smaller font for icon */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.remove-button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}
+
+.options-section {
+    margin-top: 1rem; /* Equivalent to mt-4 */
+}
+
+.options-title {
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #4a5568; /* Equivalent to text-gray-700 */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+}
+
+.option-item {
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    gap: 0.5rem; /* Equivalent to space-x-2 */
+}
+
+.option-radio {
+    margin-right: 0.25rem; /* Adjust as needed */
+}
+
+.form-input-inline {
+    flex: 1; /* Allow input to take remaining space */
+    padding: 0.5rem; /* Equivalent to p-2 */
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    color: #374151;
+}
+
+.remove-option-button {
+    background: none;
+    border: none;
+    color: #ef4444; /* Equivalent to text-red-500 */
+    font-size: 1.25rem; /* Larger for "x" */
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.remove-option-button:hover {
+    color: #dc2626; /* Darker red on hover */
+}
+
+.add-option-button {
+    background-color:#065f46; /* Equivalent to bg-blue-400 */
+    color: white;
+    padding: 0.375rem 0.75rem; /* Equivalent to px-3 py-1.5 */
+    border-radius: 1.375rem; /* Equivalent to rounded-md */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 0.5rem; /* Equivalent to mt-2 */
+}
+
+.add-option-button:hover {
+    background-color:#374151; /* Darker blue on hover */
+}
+
+.true-false-section {
+    margin-top: 1rem;
+}
+
+.true-false-radios {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.true-false-radios label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+}
+
+.true-false-radios input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.short-answer-note {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.add-question-button {
+    background-color: #2d3748; /* Equivalent to bg-green-600 */
+    color: white;
+    padding: 0.75rem 1.25rem; /* Equivalent to px-5 py-3 */
+    border-radius: 1.375rem; /* Equivalent to rounded-md */
+    font-weight: 600; /* Equivalent to font-semibold */
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem; /* Equivalent to mt-4 */
+    width: fit-content; /* Adjust width to content */
+}
+
+.add-question-button:hover {
+    background-color: #059669; /* Darker green on hover */
+    border-radius: 30px 1px;
+}
+
+
+/* Enrolled Learners Section */
+.form-group-small {
+    margin-bottom: 1rem;
+}
+
+.form-select-small {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    max-width: 300px; /* Limit width of this select */
+}
+
+.learner-list-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+}
+
+.learner-items-list {
+    list-style: disc;
+    padding-left: 1rem;
+    color: #4a5568;
+    font-size: 0.875rem;
+}
+
+.learner-item {
+    margin-bottom: 0.5rem;
+}
+
+.learner-name {
+    font-weight: 500;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Equivalent to bg-gray-800 bg-opacity-60 */
+    display: flex; /* Equivalent to flex */
+    align-items: center; /* Equivalent to items-center */
+    justify-content: center; /* Equivalent to justify-center */
+    z-index: 1000; /* Equivalent to z-50 */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 1.5rem; /* Equivalent to p-6 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Equivalent to shadow-xl */
+    max-width: 600px; /* Equivalent to max-w-xl */
+    width: 90%; /* Equivalent to w-full */
+    overflow-y: auto; /* Scrollable content */
+    max-height: 90vh; /* Max height to fit screen */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex; /* Equivalent to flex */
+    justify-content: space-between; /* Equivalent to justify-between */
+    align-items: center; /* Equivalent to items-center */
+    border-bottom: 1px solid #e2e8f0; /* Equivalent to border-b border-gray-200 */
+    padding-bottom: 1rem; /* Equivalent to pb-4 */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+}
+
+.modal-title {
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    color: #2d3748; /* Equivalent to text-gray-800 */
+}
+
+.modal-close-button {
+    background: none;
+    border: none;
+    font-size: 2rem; /* Larger 'x' */
+    color: #4a5568; /* Equivalent to text-gray-500 */
+    cursor: pointer;
+    line-height: 1; /* Prevent extra spacing */
+    transition: color 0.2s ease-in-out;
+}
+
+.modal-close-button:hover {
+    color: #1a202c; /* Darker on hover */
+}
+
+.modal-body {
+    flex-grow: 1; /* Allow body to grow and take available space */
+    padding-bottom: 1rem; /* Add padding at bottom */
+}
+
+.quiz-detail-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    color: #333;
+}
+
+.quiz-detail-description,
+.quiz-detail-info {
+    margin-bottom: 0.5rem; /* Equivalent to mb-1 */
+    color: #4a5568; /* Equivalent to text-gray-700 */
+}
+
+.quiz-detail-subtitle {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-top: 1rem; /* Equivalent to mt-4 */
+    margin-bottom: 0.75rem; /* Equivalent to mb-3 */
+    color: #333;
+}
+
+.quiz-detail-questions-list {
+    list-style: decimal; /* Ordered list */
+    padding-left: 1.25rem; /* Indent numbers */
+}
+
+.quiz-detail-question-item {
+    margin-bottom: 1rem; /* Space between questions */
+    padding: 0.75rem;
+    border: 1px solid #edf2f7; /* Light border */
+    border-radius: 0.375rem;
+    background-color: #f7fafc; /* Light background */
+}
+
+.question-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.question-options-list {
+    list-style: none; /* No bullets */
+    padding-left: 0; /* No indent */
+    margin-top: 0.5rem;
+}
+
+.question-option-item {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 0.25rem;
+}
+
+.question-option-item.correct {
+    font-weight: bold;
+    color: #059669; /* Green for correct answer */
+}
+
+.correct-badge {
+    margin-left: 0.5rem;
+    background-color: #d1fae5; /* Light green background */
+    color: #065f46; /* Dark green text */
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px; /* Pill shape */
+    font-size: 0.75rem;
+}
+
+.true-false-answer {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e2e8f0; /* Equivalent to border-t border-gray-200 */
+    padding-top: 1rem; /* Equivalent to pt-4 */
+    margin-top: 1rem; /* Equivalent to mt-4 */
+    display: flex; /* Equivalent to flex */
+    justify-content: flex-end; /* Equivalent to justify-end */
+}
+
+.close-modal-button {
+    background-color: #6b7280; /* Equivalent to bg-gray-500 */
+    color: white;
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.close-modal-button:hover {
+    background-color: #4b5563; /* Equivalent to hover:bg-gray-600 */
+}
+
+.error-message {
+    color: #dc2626; /* Equivalent to text-red-600 */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-bottom: 1rem; /* Often used with error messages */
+}

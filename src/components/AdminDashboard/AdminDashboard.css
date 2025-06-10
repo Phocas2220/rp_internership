@@ -1,0 +1,127 @@
+.body
+{
+    font-size: small;
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #460b3b;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.logout-button {
+  background:transparent;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  margin-left: 780px;
+  transition: background-color 1s ease;
+}
+
+.logout-button:hover {
+  background-color: red;
+  transition: 1s ease;
+}
+
+.power-icon {
+  margin-left: 8px;
+}
+
+.dashboard-content {
+  padding: 10px;
+}
+.p-6
+{
+    padding: 2%;
+}
+.flex
+{
+    margin: 10px;
+}
+.dashboard-main {
+  background: #f1f5f9; /* light gray background */
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(6, 154, 191, 0.05);
+  min-height: 72vh;
+  transition: all 0.3s ease
+}
+.btn {
+  background-color: #e2e8f0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 900;
+  color: #1d7036;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #98d984;
+  transition: 1s ease-in;
+}
+
+.btn-primary {
+  background-color: #1d7036;
+  color: white;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.btn-primary:hover {
+  background-color: #206c09;
+  transition: 1s ease-in;
+}
+.button
+{
+    padding: 20px;
+}
+.des h6
+{
+    margin-bottom: none;
+    margin-left: 80%;
+    margin-right: 12px;
+    max-width: 15%;
+}
+
+.des h6:hover
+{
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #22c51c;
+    color: white;
+    
+    cursor:not-allowed;
+    transition: 1s;
+    box-shadow: 0 0  5px #1e293b,0 0  15px #1e293b, 0 0  25px #1e293b,0 0  35px #1e293b;
+}
+.marquee-heading {
+  
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 30s linear infinite;
+  behavior: alternate;
+  font-weight: bold;
+
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(20%); }
+  20% { transform: translateX(-20%); }
+}
